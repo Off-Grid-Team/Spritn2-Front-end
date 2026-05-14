@@ -1,0 +1,175 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: #0f0f1a;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    color: white;
+}
+
+/* HEADER */
+header{
+    height: 70px;
+    background: #171722;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Arrow top */
+#btn-opcoes-cima{
+    width: 18px;
+    height: 18px;
+    border: none;
+    background: transparent;
+    border-top: 3px solid #d9d9d9;
+    border-right: 3px solid #d9d9d9;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
+/* MAIN CAMERA AREA */
+main{
+    flex: 1;
+    background: black;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fake camera preview */
+#video,
+#canvas{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: black;
+}
+
+/* Small info button */
+main::after{
+    content: "i";
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    border-radius: 50%;
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FOOTER */
+footer{
+    height: 155px;
+    background: #171722;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 16px 18px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* CAMERA MODES */
+.modos-camera{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-top: 4px;
+}
+
+/* MODE BUTTONS */
+.modo{
+    border: none;
+    background: #2a2a3d;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* ACTIVE MODE */
+.modo.ativo{
+    background: white;
+    color: #171722;
+}
+
+/* HOVER EFFECT */
+.modo:hover{
+    opacity: 0.8;
+}
+
+
+/* BUTTON CONTAINER */
+footer{
+    position: relative;
+}
+
+/* CAMERA BUTTONS */
+#btn-foto,
+#btn-virar,
+#btn-galeria{
+    position: absolute;
+    bottom: 20px;
+    border: none;
+    border-radius: 50%;
+    background: #d9d9d9;
+    cursor: pointer;
+}
+
+/* Left button */
+#btn-foto{
+    width: 56px;
+    height: 56px;
+    left: 30px;
+}
+
+/* Center button (main shutter) */
+#btn-virar{
+    width: 66px;
+    height: 66px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Right button */
+#btn-galeria{
+    width: 56px;
+    height: 56px;
+    right: 30px;
+}
+
+/* Active tab effect */
+footer span{
+    color: white;
+}
+
+/* MOBILE FIT */
+@media (max-width: 480px){
+    footer::before{
+        font-size: 13px;
+    }
+
+    #btn-virar{
+        width: 64px;
+        height: 64px;
+    }
+}
