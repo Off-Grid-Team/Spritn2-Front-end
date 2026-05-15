@@ -3,7 +3,7 @@ buttonVoltar = document.getElementById("btn-voltar");
 
 if (buttonCima){
     buttonCima.onclick = function() {
-        window.location.href = "./src/pages/lista-modos.html";
+        window.location.href = "./pages/lista-modos.html";
     }
 }
 
