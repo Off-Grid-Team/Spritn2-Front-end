@@ -1,0 +1,142 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #141421, #181826);
+    color: white;
+    padding: 20px 10px;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* BACK BUTTON */
+#btn-voltar{
+    position: absolute;
+    left: 5px;
+    width: 16px;
+    height: 16px;
+    border: none;
+    background: transparent;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+/* TITLE */
+header h1{
+    font-size: 28px;
+    font-weight: 400;
+}
+
+/* MAIN CONTAINER */
+.container-lista-modos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* LIST */
+.listamodos ul{
+    list-style: none;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* CARD */
+.listamodos li{
+    background: rgba(0,0,0,0.75);
+    border-radius: 18px;
+    min-height: 95px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+/* LEFT ICON CIRCLE */
+.listamodos li::before{
+    content: "";
+    width: 52px;
+    height: 52px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* MODE TITLE */
+.listamodos li h1{
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 70px;
+    max-width: 190px;
+    line-height: 1.2;
+}
+
+/* HEART BUTTON */
+.favoritar{
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: #9b9b9b;
+    clip-path: path("M12 21s-6.7-4.35-10-8.28C-1.74 8.36 1.42 3 6.18 3c2.38 0 4.12 1.36 5.82 3.09C13.7 4.36 15.44 3 17.82 3 22.58 3 25.74 8.36 22 12.72 18.7 16.65 12 21 12 21z");
+    cursor: pointer;
+    margin-right: 50px;
+    margin-left: 50px;
+    transition: 0.2s;
+}
+
+/* HEART HOVER */
+.favoritar:hover{
+    background: #ff5c8a;
+}
+
+/* TOGGLE SWITCH */
+.listamodos li::after{
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* MOBILE */
+@media (max-width: 480px){
+
+    header h1{
+        font-size: 24px;
+    }
+
+    .listamodos li{
+        min-height: 88px;
+    }
+
+    .listamodos li h1{
+        font-size: 18px;
+    }
+}
